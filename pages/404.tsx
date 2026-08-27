@@ -5,16 +5,12 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Error 404</title>
-                <meta
-                    name="description"
-                    content="PUTZZZZZZ.... PaGiNa NãO EnCoNtRaDa"
-                />
+                <title>?</title>
+                <meta name="description" content="?" />
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <link rel="icon" href="/gifs/nyan_cat.gif" />
             </Head>
             <body>
                 <audio id="errorsong" src={"/songs/errorsong.mp3"} loop />
@@ -55,6 +51,14 @@ export default function Home() {
                                     document.getElementById(
                                         "buttonTriggerPlay",
                                     )!.style.display = "none";
+                                    document.title = "Error404";
+                                    document.head.ariaDescription =
+                                        "PUUUUUUUTZZZZZZ.... PaGiNa NãO EnCoNtRaDa";
+                                    let novoIcon =
+                                        document.createElement("link");
+                                    novoIcon.rel = "icon";
+                                    novoIcon.href = "/gifs/nyan_cat.gif";
+                                    document.head.appendChild(novoIcon);
                                 }}
                             >
                                 ?
@@ -76,7 +80,7 @@ export default function Home() {
                         <div>
                             <h1>Error404 Page Not Found</h1>
                             <p>
-                                PUTZZZZZZZ.... Deu ERRO AqUi oh Pagina NãO
+                                PUUUUUUUTZZZZZZ.... Deu ERRO AqUi oh Pagina NãO
                                 EnCoNtRaDa, isso quer dizer que você entrou em
                                 uma pagina que não existe nos arquivos do meu
                                 site
