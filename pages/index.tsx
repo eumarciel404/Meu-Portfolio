@@ -20,6 +20,15 @@ export default function Home() {
                     content="width=device-width, initial-scale=1"
                 />
 
+                <meta property="og:image" content="/eu.jpg" />
+
+                <meta property="og:site_name" content="Marcelo Neves" />
+                <meta property="og:title" content="Marcelo Neves Programador" />
+                <meta
+                    property="og:description"
+                    content="Um programador dedicado e entendendor das suas necessidades"
+                />
+
                 <link rel="icon" href="/eu.jpg" />
             </Head>
 
