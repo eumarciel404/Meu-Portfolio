@@ -26,7 +26,6 @@ export default function HeaderPc() {
                             <i className="material-symbols-outlined">
                                 deployed_code
                             </i>
-
                             <h3 style={{ margin: 0 }}>projetos</h3>
                         </div>
                     </Link>
