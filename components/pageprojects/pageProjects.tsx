@@ -1,4 +1,4 @@
-import BotGerenciamentoDiscord from "./projects/botGerenciamentoDIscord";
+import BotGerenciamentoDiscord from "./projects/botGerenciamentoDiscord";
 import DiscordComponents from "./projects/discordComponents";
 import PluginMinecraft from "./projects/pluginMinecraft";
 import Portifilio from "./projects/portfolio";
