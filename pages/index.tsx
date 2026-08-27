@@ -20,7 +20,7 @@ export default function Home() {
                     content="width=device-width, initial-scale=1"
                 />
 
-                <meta property="og:image" content="/eu.jpg" />
+                <meta property="og:image" content="/images/eu.jpg" />
 
                 <meta property="og:site_name" content="Marcelo Neves" />
                 <meta property="og:title" content="Marcelo Neves Programador" />
@@ -29,7 +29,7 @@ export default function Home() {
                     content="Um programador dedicado e entendendor das suas necessidades"
                 />
 
-                <link rel="icon" href="/eu.jpg" />
+                <link rel="icon" href="/images/eu.jpg" />
             </Head>
 
             <body>
@@ -41,7 +41,7 @@ export default function Home() {
                     className="articleFull alignItens warp gap1"
                 >
                     <Image
-                        src="/eu.jpg"
+                        src="/images/eu.jpg"
                         alt="eu"
                         width={140}
                         height={140}
