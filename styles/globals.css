@@ -59,7 +59,7 @@ a *:hover {
 .projectContainer {
     transition: 0.5s;
     background-color: rgba(0, 0, 255, 0.11);
-    border: solid rgba(128, 128, 128, 0.301) 2px;
+    border: 2px solid rgba(128, 128, 128, 0.301);
     border-radius: 5px;
     padding: 10px;
     max-width: 300px;
@@ -96,10 +96,8 @@ a *:hover {
 
 .footerProjectContainer div {
     background-color: rgba(55, 108, 255, 0.377);
-    border-color: rgba(55, 108, 255, 0.897);
-    border-style: solid;
     border-radius: 5px;
-    border-width: 1px;
+    border: 1px solid rgba(55, 108, 255, 0.897);;
     padding: 5px;
     font-size: small;
     color: rgba(255, 255, 255, 0.795);
@@ -119,11 +117,11 @@ a *:hover {
 
 .projectsContainers {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
     justify-content: center;
     gap: 20px;
-    max-width: 1000px;
     width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
