@@ -1,9 +1,8 @@
 import HeaderPc from "@/components/headers/headerPc";
-import HeaderMobile from "@/components/headers/herderMobile";
+import HeaderMobile from "@/components/headers/hearderMobile";
 import PageProjects from "@/components/pageprojects/pageProjects";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
     return (
@@ -27,11 +26,18 @@ export default function Home() {
             <body>
                 <HeaderPc />
                 <HeaderMobile />
+
                 <div
                     id="shortApresentation"
                     className="articleFull alignItens warp gap1"
                 >
-                    <Image src="/eu.jpg" alt="eu" width={140} height={140} style={{ borderRadius: 99 }} />
+                    <Image
+                        src="/eu.jpg"
+                        alt="eu"
+                        width={140}
+                        height={140}
+                        style={{ borderRadius: 99 }}
+                    />
 
                     <div>
                         <h1 style={{ margin: 0 }}>Marcelo Neves</h1>
@@ -61,36 +67,55 @@ export default function Home() {
                             <h2>sobre</h2>
                         </div>
 
-                        <div
-                            style={{
-                                width: "100%",
-                                display: "flex",
-                                justifyContent: "center",
-                            }}
-                        >
-                            <article>
-                                Me chamo Marcelo Neves De Oliveira, tenho{" "}
-                                {new Date().getFullYear() - 2004} anos, gosto de
-                                programação desde que eu tinha 10 anos de idade,
-                                nasci em Maricá no Rio de Janeiro, vivi boa
-                                parte da minha vida em Niterói/Rj, sou um
-                                entusiasta da tecnologia, estudo programação
-                                desde os 15/16 anos de idade quando montei meu
-                                pc depois de consegui um estagio em uma casa de
-                                material de contrução e bazar chamada Casa
-                                Leader situada em Itaipu no Rio de Janeiro gosto
-                                de realizar projetos e de trabalhar em coisas
-                                grander, refazer meus codigos para testar meus
-                                conhecimentos ao maximo e ver o quão evolui
-                            </article>
-                        </div>
+                        <article>
+                            Me chamo Marcelo Neves De Oliveira, tenho{" "}
+                            {new Date().getFullYear() - 2004} anos, gosto de
+                            programação desde que eu tinha 10 anos de idade,
+                            nasci em Maricá no Rio de Janeiro, vivi boa parte da
+                            minha vida em Niterói/Rj, sou um entusiasta da
+                            tecnologia, estudo programação desde os 15/16 anos
+                            de idade quando montei meu pc depois de consegui um
+                            estagio em uma casa de material de contrução e bazar
+                            chamada Casa Leader situada em Itaipu no Rio de
+                            Janeiro gosto de realizar projetos e de trabalhar em
+                            coisas grander, refazer meus codigos para testar
+                            meus conhecimentos ao maximo e ver o quão evolui
+                        </article>
                     </div>
                 </div>
 
                 <PageProjects />
 
-                <footer id="footerPage"></footer>
+                <div style={{ backgroundColor: "rgba(255, 255, 255, 0.14)" }}>
+                    <div className="articleFull">
+                        <div className="alignItens center">
+                            <i
+                                style={{ fontSize: 40 }}
+                                className="material-symbols-outlined"
+                            >
+                                person
+                            </i>
+                            <h2>Perfil profissional</h2>
+                        </div>
+                        <div
+                            className="textCenter"
+                            style={{ maxBlockSize: 300 }}
+                        >
+                            Desenvolvedor focado na criação de aplicações web
+                            modernas, interfaces funcionais e automações.
+                            Experiência prática no ecossistema
+                            JavaScript/TypeScript e Next.js, construindo
+                            soluções completas — desde sistemas de gerenciamento
+                            até bots públicos e integrações via API.
+                            Constantemente aprimorando conhecimentos em
+                            arquitetura de software, código limpo e trabalho em
+                            equipe para resolver problemas reais através do
+                            código
+                        </div>
+                    </div>
+                </div>
 
+                <footer id="footerPage"></footer>
             </body>
         </>
     );
