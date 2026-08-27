@@ -61,7 +61,7 @@ export default function Home() {
                                     document.head.appendChild(novoIcon);
                                 }}
                             >
-                                ?
+                                Clique Me
                             </button>
                         </div>
                     </div>
