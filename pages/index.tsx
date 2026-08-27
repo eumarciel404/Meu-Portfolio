@@ -12,13 +12,15 @@ export default function Home() {
 
                 <meta
                     name="description"
-                    content="Portifolio de Marcelo Neves um desenvolvedor full stack dedicado"
+                    content="Portfolio de Marcelo Neves um desenvolvedor full stack dedicado"
                 />
 
                 <meta
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
+
+                <link rel="icon" href="/images/eu.jpg" />
 
                 <meta property="og:image" content="/images/eu.jpg" />
 
@@ -28,8 +30,6 @@ export default function Home() {
                     property="og:description"
                     content="Um programador dedicado e entendendor das suas necessidades"
                 />
-
-                <link rel="icon" href="/images/eu.jpg" />
             </Head>
 
             <body>
