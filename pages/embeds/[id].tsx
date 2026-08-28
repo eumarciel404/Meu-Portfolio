@@ -1,4 +1,4 @@
-import axios from "axios";
+import { teste } from "@/scripts/db/neon";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -7,13 +7,20 @@ export default function Id(data: any) {
         <>
             <Head>
                 <title>?</title>
+
+                {/* Para o WPP */}
+                <meta property="og:type" content="website" />
                 <meta property="og:title" content={data["og:title"] || ""} />
-                <meta
-                    property="og:description"
-                    content={data["og:description"] || ""}
-                />
+                <meta property="og:description" content={data["og:description"] || ""}/>
                 <meta property="og:image" content={data["og:image"] || ""} />
                 <meta property="og:url" content={data["og:url"] || ""} />
+
+                {/* Para o discord */}
+                <meta name="theme-color" content="#5865F2" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={data["og:title"] || ""} />
+                <meta name="twitter:description" content={data["og:description"] || ""} />
+                <meta name="twitter:image" content={data["og:image"] || ""} />
             </Head>
             <body>
                 <audio id="errorsong" src={"/songs/errorsong.mp3"} loop />
@@ -97,16 +104,13 @@ export default function Id(data: any) {
 }
 
 export async function getServerSideProps(context: any) {
-    const response = await axios
-        .get("/api/teste")
-        .then((x) =>
-            x.data.response.find((i: any) => i.id === context.query.id),
-        )
-        .catch((err) => console.error(err));
+    let response = await teste();
 
-    if (response)
+    if (response) {
         return {
-            props: response,
+            props: response.find((x: any) => x.id === context.query.id),
         };
+    }
+
     return { notFound: true };
 }
