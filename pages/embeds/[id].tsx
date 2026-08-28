@@ -11,7 +11,10 @@ export default function Id(data: any) {
                 {/* Para o WPP */}
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content={data["og:title"] || ""} />
-                <meta property="og:description" content={data["og:description"] || ""}/>
+                <meta
+                    property="og:description"
+                    content={data["og:description"] || ""}
+                />
                 <meta property="og:image" content={data["og:image"] || ""} />
                 <meta property="og:url" content={data["og:url"] || ""} />
 
@@ -19,7 +22,10 @@ export default function Id(data: any) {
                 <meta name="theme-color" content="#5865F2" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={data["og:title"] || ""} />
-                <meta name="twitter:description" content={data["og:description"] || ""} />
+                <meta
+                    name="twitter:description"
+                    content={data["og:description"] || ""}
+                />
                 <meta name="twitter:image" content={data["og:image"] || ""} />
             </Head>
             <body>
@@ -104,6 +110,10 @@ export default function Id(data: any) {
 }
 
 export async function getServerSideProps(context: any) {
+    context.res.setHeader(
+        "Cache-Control",
+        "no-store, no-cache, must-revalidate, proxy-revalidate",
+    );
     let response = await teste();
 
     if (response) {
